@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Monument';
+    src: url('fonts/monumentextended-regular-webfont.woff') format('woff2'),
+         url('fonts/monumentextended-ultrabold-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: Arial, sans-serif, 'Monument';
+    background-color: #f2f2f2;
+}
+
+                                /* NavBar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #ffffff;
+    padding: 12px 20px;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    font-size: 23px;
+    align-items: center;
+}
+.nav-links li {
+    margin: 0 15px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.nav-links a:hover {
+    color: #ffa500;
+}
+
+ 
+
+                                /* Products */
+.shop-tet {
+    font-family: "Monument";
+    width: 100%;
+    font-size: 48px;
+    text-align: center;
+    height: auto;
+    background-color: white;
+    color: black;
+    padding-top: 44px;
+}
+.shop-products {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+.product1, .product2, .product3, .product4, .product5 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #fff;
+    text-align: center;
+    margin: auto;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    gap: 5%;
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 2%;
+    margin-top: 4%;
+}
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.box img {
+    width: 77%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+.box img:hover {
+    transform: scale(1.1);
+}
+.box h2 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+.box h3 {
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0;
+}
+
+
+
+
+                                /* Email Section */
+.email {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+}
+.first {
+    font-size: 36px;
+    font-weight: bold;
+}
+.second, .third {
+    font-size: 18px;
+    font-weight: 100;
+    margin: 10px 0;
+}
+.form-control {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.input {
+    color: #fff;
+    background-color: transparent;
+    font-size: 0.9rem;
+    width: 300px;
+    padding: 0.7em 1em;
+    border: none;
+    border-bottom: 2px solid #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.input:focus {
+    outline: none;
+    border-bottom-color: #FFBF59;
+}
+.input-border {
+    position: absolute;
+    background: #FFBF59;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+.input:focus + .input-border {
+    width: 100%;
+}
+.btn {
+    margin-left: 10px;
+    padding: 0.8em 2em;
+    font-size: 1rem;
+    background-color: #FFBF59;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn:hover {
+    background-color: #FF6464;
+}
+
+
+
+                                /* Footer Section */
+.footer {
+    background-color: rgb(54, 58, 143);
+    color: #fff;
+    padding: 25px 20px;
+    text-align: center;
+    width: 100%;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-section {
+    flex: 1;
+    margin: 20px;
+}
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #ccc;
+}
+.footer-section a {
+    text-decoration: none;
+    color: #ccc;
+}
+.footer-section a:hover {
+    color: #ffa500;
+}
