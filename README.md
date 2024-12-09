@@ -1,24 +1,24 @@
 <p align="center">
   <br>
-  <i>This is the Landing Page with the Call-To-Action button</i>
+  <i>This is the Landing Page with Call-to-Action button</i>
 </p>
 
-![09-Dec-24 4-38-34 PM](https://github.com/user-attachments/assets/62e20f12-9e0a-4bdf-9034-24b1387e9968)
+![09-Dec-24 4-38-34 PM](https://github.com/user-attachments/assets/83de6a8f-b880-41ba-a96d-05497c5afabb)
 
-![image](https://github.com/user-attachments/assets/534bde8e-de4d-4baf-bbc6-7ae8d0068fc5)
+![09-Dec-24 4-36-07 PM](https://github.com/user-attachments/assets/7be9450f-1001-49ee-b64e-e0368d0962a9)
 
-![image](https://github.com/user-attachments/assets/af2554b2-53dd-4dd1-b61c-0c8d49e088b0)
+![09-Dec-24 4-36-11 PM](https://github.com/user-attachments/assets/97d86a9a-0868-41bb-8013-8c0cd0935b28)
 
 <p align="center">
   <br>
   <i>This is the Products Page</i>
 </p>
 
-![image](https://github.com/user-attachments/assets/527bf8c7-914e-4266-9426-e7ff4a1f3abc)
+![09-Dec-24 4-36-17 PM](https://github.com/user-attachments/assets/7abdeb47-1d58-49f9-903e-596e924e223d)
 
 <p align="center">
   <br>
   <i>This is the About Us Page</i>
 </p>
 
-![image](https://github.com/user-attachments/assets/cb54b148-6376-47d8-92db-91a08d7e9dc3)
+![09-Dec-24 4-36-28 PM](https://github.com/user-attachments/assets/45769371-aa9b-485d-90f6-4ed7519c6f8a)
