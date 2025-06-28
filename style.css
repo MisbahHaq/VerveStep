@@ -12,6 +12,10 @@
     font-weight: normal;
 }
 
+.hero {
+    display: flex;
+}
+
 .left {
     background-color: whitesmoke;
     width: 50%;
@@ -20,8 +24,27 @@
     display: flex;
 }
 
-.hero {
+.grid {
     display: flex;
+    flex-direction: row;
+}
+
+.grid .row1 {
+    margin-left: 40px;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: row;
+    gap: 90px;
+}
+
+.grid img {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
 }
 
 .right {
