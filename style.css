@@ -25,7 +25,7 @@
 }
 
 .grids-start {
-     margin-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 .grid {
@@ -38,24 +38,24 @@
     margin-left: 40px;
     display: flex;
     flex-direction: row;
-    gap: 90px;
+    gap: 50px;
 }
 
 .image-wrapper {
   position: relative;
   display: inline-block;
-  margin-left: 30px; /* to avoid sticking to container edge */
+  margin-left: 30px; 
   margin-top: 30px;
 }
 
 .img-number {
   position: absolute;
-  top: -1px;   /* move it above the image */
-  left: -15px;  /* move it to the left of the image */
-  font-size: 14px;
+  top: -1px;   
+  left: -15px; 
+  font-size: 10px;
   font-weight: bold;
   color: #333;
-  background-color: transparent; /* or give a background if needed */
+  background-color: transparent; 
 }
 
 
@@ -64,9 +64,9 @@
     width: 150px;
     height: 120px;
     object-fit: cover;
-     flex-direction: row;
-     justify-content: center;
-     align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .right {
