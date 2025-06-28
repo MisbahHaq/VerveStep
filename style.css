@@ -19,19 +19,23 @@
 .left {
     background-color: whitesmoke;
     width: 50%;
-    justify-content: left;
-    align-items: start;
     display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.grids-start {
+     margin-bottom: 50px;
 }
 
 .grid {
     display: flex;
     flex-direction: row;
+    margin-top: 55px;
 }
 
 .grid .row1 {
     margin-left: 40px;
-    margin-top: 150px;
     display: flex;
     flex-direction: row;
     gap: 90px;
@@ -40,7 +44,7 @@
 .grid img {
     display: flex;
     width: 150px;
-    height: 150px;
+    height: 120px;
     object-fit: cover;
      flex-direction: row;
      justify-content: center;
