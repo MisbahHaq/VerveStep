@@ -52,9 +52,20 @@
 }
 
 .right {
-    justify-content: right;
-    align-items: end;
     display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: gainsboro;
     width: 50%;
+}
+
+.frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.frame img {
+    width: 500px;
+    height: 320px;
 }
