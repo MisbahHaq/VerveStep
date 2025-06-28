@@ -70,6 +70,12 @@ img {
   width: 150px;
   height: 120px;
   object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.grid img:hover {
+  filter: grayscale(0%);
 }
 
 .right {
@@ -96,5 +102,5 @@ img {
 }
 
 .date {
-  margin-top: 220px;
+  margin-top: 180px;
 }

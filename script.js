@@ -40,7 +40,7 @@ for (let i = 0; i < imagePaths.length; i += imagesPerRow) {
         if (tempImg.height > tempImg.width) {
           frameImg.style.objectFit = "contain";
           frameImg.style.width = "580px";
-          frameImg.style.height = "400px";
+          frameImg.style.height = "700px";
         } else {
           frameImg.style.objectFit = "cover";
           frameImg.style.width = "580px";
