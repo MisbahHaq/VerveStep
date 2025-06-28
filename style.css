@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Gilroy;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./Gilroy-Light.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+.left {
+    background-color: whitesmoke;
+    width: 50%;
+    justify-content: left;
+    align-items: start;
+    display: flex;
+}
+
+.hero {
+    display: flex;
+}
+
+.right {
+    justify-content: right;
+    align-items: end;
+    display: flex;
+    background-color: gainsboro;
+    width: 50%;
+}
