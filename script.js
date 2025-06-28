@@ -1,40 +1,33 @@
-const thumbnails = document.querySelectorAll(".left img");
-const mainFrame = document.querySelector(".frame img");
-
-thumbnails.forEach((img) => {
-  img.addEventListener("mouseenter", () => {
-    mainFrame.src = img.src;
-  });
-});
-
-
 const leftPanel = document.getElementById("left-panel");
 
-// Array of image filenames
-const imagePaths = ["1.jpg", "2.jpg", "3.jpg", "4.jpg"];
-const totalGrids = 4;
-let imageCount = 1; // Global image number
+const imagePaths = [
+  "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg",
+  "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg"
+];
 
-for (let i = 0; i < totalGrids; i++) {
+const imagesPerRow = 4; // Adjust based on your design
+let imageCount = 1;
+
+for (let i = 0; i < imagePaths.length; i += imagesPerRow) {
   const grid = document.createElement("div");
   grid.classList.add("grid");
 
   const row = document.createElement("div");
   row.classList.add("row1");
 
-  imagePaths.forEach((img) => {
+  const currentImages = imagePaths.slice(i, i + imagesPerRow);
+  currentImages.forEach((img) => {
     const wrapper = document.createElement("div");
     wrapper.classList.add("image-wrapper");
 
     const number = document.createElement("span");
     number.classList.add("img-number");
-    number.textContent = imageCount++;
+    number.textContent = imageCount;
 
     const image = document.createElement("img");
     image.src = `./Images/${img}`;
     image.alt = `Photo ${imageCount}`;
 
-    // Add hover effect to update the right-side image
     image.addEventListener("mouseenter", () => {
       document.querySelector(".frame img").src = image.src;
     });
@@ -42,6 +35,8 @@ for (let i = 0; i < totalGrids; i++) {
     wrapper.appendChild(number);
     wrapper.appendChild(image);
     row.appendChild(wrapper);
+
+    imageCount++;
   });
 
   grid.appendChild(row);
