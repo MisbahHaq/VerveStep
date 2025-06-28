@@ -41,6 +41,24 @@
     gap: 90px;
 }
 
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-left: 30px; /* to avoid sticking to container edge */
+  margin-top: 30px;
+}
+
+.img-number {
+  position: absolute;
+  top: -1px;   /* move it above the image */
+  left: -15px;  /* move it to the left of the image */
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  background-color: transparent; /* or give a background if needed */
+}
+
+
 .grid img {
     display: flex;
     width: 150px;
@@ -53,6 +71,7 @@
 
 .right {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: gainsboro;
@@ -66,6 +85,12 @@
 }
 
 .frame img {
-    width: 500px;
-    height: 320px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+     transition: all 0.3s ease-in-out;
+}
+
+.date {
+    margin-top: 220px;
 }
