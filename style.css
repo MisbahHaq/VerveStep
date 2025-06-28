@@ -1,95 +1,100 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Gilroy;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Gilroy;
 }
 
 @font-face {
-    font-family: 'Gilroy';
-    src: url('./Gilroy-Light.otf');
-    font-style: normal;
-    font-weight: normal;
+  font-family: 'Gilroy';
+  src: url('./Gilroy-Light.otf');
+  font-style: normal;
+  font-weight: normal;
+}
+
+img {
+  image-rendering: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .hero {
-    display: flex;
+  display: flex;
 }
 
 .left {
-    background-color: whitesmoke;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+  background-color: whitesmoke;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: auto; /* In case of long content */
 }
 
 .grids-start {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .grid {
-    display: flex;
-    flex-direction: row;
-    margin-top: 55px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 55px;
 }
 
 .grid .row1 {
-    margin-left: 40px;
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
+  margin-left: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
 }
 
 .image-wrapper {
   position: relative;
   display: inline-block;
-  margin-left: 30px; 
+  margin-left: 30px;
   margin-top: 30px;
 }
 
 .img-number {
   position: absolute;
-  top: -1px;   
-  left: -15px; 
+  top: -1px;
+  left: -15px;
   font-size: 10px;
   font-weight: bold;
   color: #333;
-  background-color: transparent; 
+  background-color: transparent;
 }
 
 .grid img {
-    display: flex;
-    width: 150px;
-    height: 120px;
-    object-fit: cover;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  width: 150px;
+  height: 120px;
+  object-fit: cover;
 }
 
 .right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: gainsboro;
-    width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: gainsboro;
+  width: 50%;
 }
 
 .frame {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .frame img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-     transition: all 0.3s ease-in-out;
+  width: 580px;
+  height: 320px;
+  object-fit: cover;
+  transition: width 0.3s ease, height 0.3s ease, object-fit 0.3s ease;
+  background-color: gainsboro;
 }
 
 .date {
-    margin-top: 220px;
+  margin-top: 220px;
 }

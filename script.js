@@ -5,7 +5,7 @@ const imagePaths = [
   "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg"
 ];
 
-const imagesPerRow = 4; // Adjust based on your design
+const imagesPerRow = 4;
 let imageCount = 1;
 
 for (let i = 0; i < imagePaths.length; i += imagesPerRow) {
@@ -28,8 +28,25 @@ for (let i = 0; i < imagePaths.length; i += imagesPerRow) {
     image.src = `./Images/${img}`;
     image.alt = `Photo ${imageCount}`;
 
+    // Smart preview on hover
     image.addEventListener("mouseenter", () => {
-      document.querySelector(".frame img").src = image.src;
+      const frameImg = document.querySelector(".frame img");
+
+      const tempImg = new Image();
+      tempImg.src = image.src;
+      tempImg.onload = () => {
+        frameImg.src = image.src;
+
+        if (tempImg.height > tempImg.width) {
+          frameImg.style.objectFit = "contain";
+          frameImg.style.width = "580px";
+          frameImg.style.height = "400px";
+        } else {
+          frameImg.style.objectFit = "cover";
+          frameImg.style.width = "580px";
+          frameImg.style.height = "320px";
+        }
+      };
     });
 
     wrapper.appendChild(number);
