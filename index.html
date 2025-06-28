@@ -2,30 +2,35 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PhotoSite</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PhotoSite</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <div class="hero">
-    <div class="left" id="left-panel">
-      <div class="grids-start"></div>
-      <!-- JS will generate image grids here -->
-    </div>
+    <div class="hero">
+        <div class="left" id="left-panel">
+            <div class="grids-start"></div>
+        </div>
 
-    <div class="right">
-      <div class="frame">
-        <img src="./Images/1.jpg" alt="" />
-      </div>
-      <div class="date">
-        <h1>2024 ------ 2025</h1>
-      </div>
+        <div class="right">
+            <div class="frame">
+                <img src="./Images/1.jpg" alt="" />
+            </div>
+            <div class="date">
+                <h1>2024 ------ 2025</h1>
+            </div>
+        </div>
     </div>
-  </div>
+    <div class="slider-modal" id="slider-modal">
+        <span class="close-btn" id="close-btn">&times;</span>
+        <img id="slider-img" src="" alt="Slider Image">
+        <div class="arrow left" id="prev">&#10094;</div>
+        <div class="arrow right" id="next">&#10095;</div>
+    </div>
+    <script src="script.js"></script>
 
-  <script src="script.js"></script>
 </body>
 
 </html>

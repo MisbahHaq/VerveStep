@@ -6,8 +6,8 @@
 }
 
 @font-face {
-  font-family: 'Gilroy';
-  src: url('./Gilroy-Light.otf');
+  font-family: "Gilroy";
+  src: url("./Gilroy-Light.otf");
   font-style: normal;
   font-weight: normal;
 }
@@ -29,7 +29,7 @@ img {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  overflow-y: auto; /* In case of long content */
+  overflow-y: auto;
 }
 
 .grids-start {
