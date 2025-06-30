@@ -159,9 +159,6 @@ img {
   border-radius: 50%;
 }
 
-/* Base styles remain unchanged, keeping your structure intact */
-
-/* Make .hero stack vertically on smaller screens */
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
@@ -202,7 +199,6 @@ img {
   }
 }
 
-/* Make bottom-nav adapt to smaller screens */
 @media (max-width: 500px) {
   .bottom-nav {
     gap: 20px;
