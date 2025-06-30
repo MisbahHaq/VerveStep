@@ -23,6 +23,26 @@
       </div>
     </div>
 
+    <script>
+        const navItems = document.querySelectorAll('.nav-item');
+      
+        navItems.forEach((item) => {
+          item.addEventListener('click', () => {
+            navItems.forEach((el) => el.classList.remove('active'));
+            item.classList.add('active');
+          });
+        });
+      </script>
+      
     <script src="script.js"></script>
+    <div class="bottom-nav">
+        <p class="nav-item active">Home</p>
+        <p class="nav-item">Gallery</p>
+        <p class="nav-item">Contact</p>
+      </div>
+      
+  </body>
+</html>
+
   </body>
 </html>
