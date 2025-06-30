@@ -2,15 +2,21 @@ const leftPanel = document.getElementById("left-panel");
 
 const imagePaths = [
   "1.jpg",
-  "2.jpg",
-  "3.jpg",
-  "4.jpg",
+  "2.webp",
+  "3.png",
+  "4.webp",
   "5.jpg",
-  "6.jpg",
+  "6.webp",
   "7.jpg",
   "8.jpg",
-  "9.jpg",
+  "9.webp",
   "10.jpg",
+  "11.webp",
+  "12.jpg",
+  "13.jpg",
+  "14.webp",
+  "15.webp",
+  "16.jpg"
 ];
 
 const imagesPerRow = 4;
