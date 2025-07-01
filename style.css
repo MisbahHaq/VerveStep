@@ -1,0 +1,1239 @@
+/* *
+/* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("./Fonts/Gilroy-Light.otf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Gilroy Bold";
+    src: url("./Fonts/Gilroy-ExtraBold.otf");
+}
+
+body {
+    font-family: Gilroy, sans-serif;
+    background-color: rgb(255, 255, 255);
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-top {
+    width: 100%;
+    height: 45px;
+    background-color: black;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0 40px;
+}
+
+.left {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    padding-left: 50px;
+}
+
+.nav-items {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-items a:hover,
+.credentials a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.right {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 30px;
+}
+
+.credentials {
+    display: flex;
+    gap: 30px;
+}
+
+.hero img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    overflow: hidden;
+    display: block;
+}
+
+.second-page {
+    width: 100%;
+}
+
+.concept {
+    margin-top: 250px;
+    display: flex;
+    justify-content: space-around;
+    padding: 25px 50px;
+}
+
+.con-left {
+    width: 40%;
+}
+
+.con-right {
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.con-img {
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.con-img img {
+    width: 80%;
+    height: 600px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.nav-prod {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+
+.left-prod {
+    margin-left: 5%;
+}
+
+.right-prod {
+    margin-right: 5%;
+}
+
+.third-page {
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    margin-bottom: 160px;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+
+.product {
+    width: 400px;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.product img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fourth-page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 300px;
+}
+
+.left-col {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-big-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.left-big-box img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+    object-fit: cover;
+    display: block;
+}
+
+.right-col {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-big-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.right-big-box img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+    object-fit: cover;
+    display: block;
+}
+
+.gift-page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    gap: 40px;
+}
+
+.left-gift {
+    flex: 1;
+}
+
+.left-gift img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.right-gift {
+    flex: 1;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.right-gift button {
+    margin-top: 15px;
+    padding: 12px 24px;
+    background-color: whitesmoke;
+    color: #333;
+    border: 1px solid #333;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.right-gift button:hover {
+    background-color: #333;
+    color: white;
+    border: 1px solid #333;
+}
+
+.footer {
+    padding: 60px 5%;
+    background-color: #fff;
+    font-family: Gilroy, sans-serif;
+    font-size: 14px;
+    color: #000;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-col h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.footer-col ul li:hover {
+    text-decoration: underline;
+}
+
+.footer-col a {
+    text-decoration: underline;
+    color: #000;
+}
+
+.newsletter .desc {
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.newsletter-input {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #000;
+    width: 100%;
+    max-width: 300px;
+}
+
+.newsletter-input input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 8px;
+    font-size: 14px;
+    color: #000;
+}
+
+.newsletter-input input::placeholder {
+    color: #aaa;
+}
+
+.newsletter-input button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #000;
+}
+
+.footer-bottom {
+    margin-top: 60px;
+    text-align: right;
+    font-size: 12px;
+    color: #666;
+}
+
+@media (max-width: 1024px) {
+    .nav {
+        padding: 0 20px;
+    }
+
+    .concept {
+        flex-direction: column;
+        padding: 20px;
+        margin-top: 120px;
+    }
+
+    .con-left,
+    .con-right {
+        width: 100%;
+    }
+
+    .con-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .fourth-page {
+        flex-direction: column;
+        height: auto;
+        padding: 0 5%;
+        margin-bottom: 100px;
+    }
+
+    .left-col,
+    .right-col {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .left-big-box,
+    .right-big-box {
+        width: 48%;
+    }
+
+    .gift-page {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        padding: 0 2%;
+    }
+
+    .right-gift {
+        font-size: 18px;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+
+    .products {
+        gap: 24px;
+        padding: 30px;
+    }
+
+    .product {
+        width: 45%;
+    }
+
+    .product img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-menu {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 10px 0 10px;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    .logo {
+        padding-left: 0;
+    }
+
+    .nav-items,
+    .credentials {
+        gap: 16px;
+    }
+
+    .nav-items {
+        display: none;
+    }
+
+    .credentials {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        background: white;
+        padding: 20px;
+        font-size: 16px;
+        border-top: 1px solid #ddd;
+    }
+
+    .mobile-menu.show {
+        display: flex;
+    }
+
+    .hero img {
+        height: 40vh;
+    }
+
+    .concept {
+        margin-top: 60px;
+        padding: 10px;
+    }
+
+    .con-left,
+    .con-right {
+        width: 100%;
+    }
+
+    .con-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .nav-prod {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+
+    .products {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        gap: 16px;
+    }
+
+    .product {
+        width: 100%;
+    }
+
+    .product img {
+        width: 100%;
+        height: auto;
+    }
+
+    .fourth-page {
+        flex-direction: column;
+        height: auto;
+        padding: 0 2%;
+        margin-bottom: 60px;
+    }
+
+    .left-col,
+    .right-col {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .left-big-box,
+    .right-big-box {
+        width: 100%;
+    }
+
+    .gift-page {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        padding: 0 2%;
+        gap: 20px;
+    }
+
+    .right-gift {
+        font-size: 16px;
+    }
+
+    .footer {
+        padding: 30px 2%;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-col {
+        min-width: 0;
+    }
+
+    .newsletter-input {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        max-width: 100%;
+    }
+
+    .newsletter-input input {
+        width: 100%;
+    }
+
+    .newsletter-input button {
+        align-self: flex-end;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 1px;
+        right: 16px;
+        z-index: 1000;
+        padding: 8px 12px;
+        border-radius: 4px;
+    }
+
+.credentials {
+    display: none;
+}
+} */
+
+/* ========== 1. Global Resets & Fonts ========== */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("./Fonts/Gilroy-Light.otf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Gilroy Bold";
+    src: url("./Fonts/Gilroy-ExtraBold.otf");
+}
+
+body {
+    font-family: Gilroy, sans-serif;
+    background-color: rgb(255, 255, 255);
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    transition: all 0.3s ease-in-out;
+}
+
+/* ========== 2. Layout: Header & Navigation ========== */
+.nav-top {
+    width: 100%;
+    height: 45px;
+    background-color: black;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0 40px;
+}
+
+.left {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    padding-left: 50px;
+}
+
+.nav-items {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-items a:hover,
+.credentials a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.right {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 30px;
+}
+
+.credentials {
+    display: flex;
+    gap: 30px;
+}
+
+/* ========== 3. Hero Section ========== */
+.hero img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    overflow: hidden;
+    display: block;
+}
+
+/* ========== 4. Second Page ========== */
+.second-page {
+    width: 100%;
+}
+
+.concept {
+    margin-top: 250px;
+    display: flex;
+    justify-content: space-around;
+    padding: 25px 50px;
+}
+
+.con-left {
+    width: 40%;
+}
+
+.con-right {
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.con-img {
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.con-img img {
+    width: 80%;
+    height: 600px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.nav-prod {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+
+.left-prod {
+    margin-left: 5%;
+}
+
+.right-prod {
+    margin-right: 5%;
+}
+
+/* ========== 5. Products Section ========== */
+.third-page {
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    margin-bottom: 160px;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+
+.product {
+    width: 400px;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.product img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ========== 6. Fourth Page ========== */
+.fourth-page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 300px;
+}
+
+.left-col,
+.right-col {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-big-box,
+.right-big-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.left-big-box img,
+.right-big-box img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ========== 7. Gift Page ========== */
+.gift-page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    gap: 40px;
+}
+
+.left-gift {
+    flex: 1;
+}
+
+.left-gift img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.right-gift {
+    flex: 1;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.right-gift button {
+    margin-top: 15px;
+    padding: 12px 24px;
+    background-color: whitesmoke;
+    color: #333;
+    border: 1px solid #333;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.right-gift button:hover {
+    background-color: #333;
+    color: white;
+    border: 1px solid #333;
+}
+
+/* ========== 8. Footer ========== */
+.footer {
+    padding: 60px 5%;
+    background-color: #fff;
+    font-family: Gilroy, sans-serif;
+    font-size: 14px;
+    color: #000;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-col h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.footer-col ul li:hover {
+    text-decoration: underline;
+}
+
+.footer-col a {
+    text-decoration: underline;
+    color: #000;
+}
+
+.newsletter .desc {
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.newsletter-input {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #000;
+    width: 100%;
+    max-width: 300px;
+}
+
+.newsletter-input input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 8px;
+    font-size: 14px;
+    color: #000;
+}
+
+.newsletter-input input::placeholder {
+    color: #aaa;
+}
+
+.newsletter-input button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #000;
+}
+
+.footer-bottom {
+    margin-top: 60px;
+    text-align: right;
+    font-size: 12px;
+    color: #666;
+}
+
+/* ========== 9. Hamburger (Default) ========== */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* ========== 10. Media Queries ========== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .nav {
+        padding: 0 20px;
+    }
+
+    .concept {
+        flex-direction: column;
+        padding: 20px;
+        margin-top: 120px;
+    }
+
+    .con-left,
+    .con-right {
+        width: 100%;
+    }
+
+    .con-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .fourth-page {
+        flex-direction: column;
+        height: auto;
+        padding: 0 5%;
+        margin-bottom: 100px;
+    }
+
+    .left-col,
+    .right-col {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .left-big-box,
+    .right-big-box {
+        width: 48%;
+    }
+
+    .gift-page {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        padding: 0 2%;
+    }
+
+    .right-gift {
+        font-size: 18px;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+
+    .products {
+        gap: 24px;
+        padding: 30px;
+    }
+
+    .product {
+        width: 45%;
+    }
+
+    .product img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Hide mobile menu on desktop */
+@media (min-width: 769px) {
+    .mobile-menu {
+        display: none !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 10px 0 10px;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    .logo {
+        padding-left: 0;
+    }
+
+    .nav-items,
+    .credentials {
+        gap: 16px;
+    }
+
+    .nav-items {
+        display: none;
+    }
+
+    .credentials {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 1px;
+        right: 16px;
+        z-index: 1000;
+        padding: 8px 12px;
+        border-radius: 4px;
+    }
+
+    .mobile-menu {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        background: white;
+        padding: 20px;
+        font-size: 16px;
+        border-top: 1px solid #ddd;
+    }
+
+    .mobile-menu.show {
+        display: flex;
+    }
+
+    .hero img {
+        height: 40vh;
+    }
+
+    .concept {
+        margin-top: 60px;
+        padding: 10px;
+    }
+
+    .con-left,
+    .con-right {
+        width: 100%;
+    }
+
+    .con-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .nav-prod {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+
+    .products {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        gap: 16px;
+    }
+
+    .product {
+        width: 100%;
+    }
+
+    .product img {
+        width: 100%;
+        height: auto;
+    }
+
+    .fourth-page {
+        flex-direction: column;
+        height: auto;
+        padding: 0 2%;
+        margin-bottom: 60px;
+    }
+
+    .left-col,
+    .right-col {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .left-big-box,
+    .right-big-box {
+        width: 100%;
+    }
+
+    .gift-page {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        padding: 0 2%;
+        gap: 20px;
+    }
+
+    .right-gift {
+        font-size: 16px;
+    }
+
+    .footer {
+        padding: 30px 2%;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-col {
+        min-width: 0;
+    }
+
+    .newsletter-input {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        max-width: 100%;
+    }
+
+    .newsletter-input input {
+        width: 100%;
+    }
+
+    .newsletter-input button {
+        align-self: flex-end;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+}
