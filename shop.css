@@ -363,3 +363,56 @@ a:hover {
     margin-bottom: 15px;
     padding: 10px;
 }
+
+@media (max-width: 768px) {
+    .product img {
+        width: 100%;
+        height: auto;
+        max-width: 250px;
+        /* or 200px based on your preference */
+    }
+
+    .product {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .credentials {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav {
+        flex-direction: row;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .left {
+        width: auto;
+        padding-left: 0;
+    }
+
+    .logo {
+        padding-left: 0;
+    }
+
+    .right {
+        display: flex;
+        justify-content: flex-end;
+        width: auto;
+        gap: 0;
+    }
+
+    .nav-items {
+        display: none;
+    }
+}
