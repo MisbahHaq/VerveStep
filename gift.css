@@ -96,6 +96,19 @@ a:hover {
     justify-content: start;
     margin-left: 90px;
     margin-top: 70px;
+    gap: 40px;
+}
+
+.gift-row .left {
+    flex-shrink: 0;
+}
+
+.gift-row .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    min-width: 250px;
 }
 
 .line {
@@ -105,12 +118,6 @@ a:hover {
     margin-right: 90px;
 }
 
-.center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25%;
-}
 
 
 /* ========== 6. Products ========== */
@@ -324,6 +331,29 @@ a:hover {
         flex-direction: column;
         align-items: flex-start;
         padding: 10px 10px 0 10px;
+    }
+
+    .gift-row {
+        flex-direction: column;
+        align-items: center;
+        margin: 40px 10px 20px 10px;
+        gap: 16px;
+        text-align: center;
+    }
+
+    .gift-row .left {
+        margin: 0;
+        justify-content: center;
+    }
+
+    .gift-row .center {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .line {
+        margin: 30px auto;
+        width: 90%;
     }
 
     .left,
