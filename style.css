@@ -18,6 +18,7 @@
 
 body {
     font-family: Gilroy;
+    background-color: whitesmoke;
 }
 
 .nav-top {
@@ -213,7 +214,6 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /* vertically center the text */
     padding: 0 5%;
     gap: 40px;
 }
@@ -232,4 +232,21 @@ body {
     flex: 1;
     font-size: 20px;
     line-height: 1.6;
+}
+
+.right-gift button {
+    margin-top: 15px;
+    padding: 12px 24px;
+    background-color: whitesmoke;
+    color: #333;
+    border: 1px solid #333;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.right-gift button:hover {
+    background-color: #333;
+    color: white;
+    border: 1px solid #333;
 }
