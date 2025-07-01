@@ -348,9 +348,165 @@
         font-size: 12px;
         color: #666;
       }
+      @media (max-width: 1024px) {
+        .concept {
+          flex-direction: column;
+          padding: 20px;
+        }
+
+        .con-left,
+        .con-right {
+          width: 100%;
+        }
+
+        .con-img img {
+          width: 100%;
+          height: auto;
+        }
+
+        .fourth-page {
+          flex-direction: column;
+          height: auto;
+          padding: 0 5%;
+          margin-bottom: 100px;
+        }
+
+        .left-col,
+        .right-col {
+          width: 100%;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .left-big-box,
+        .right-big-box {
+          width: 48%;
+        }
+
+        .gift-page {
+          flex-direction: column;
+          height: auto;
+          text-align: center;
+        }
+
+        .right-gift {
+          font-size: 18px;
+        }
+
+        .footer-columns {
+          flex-direction: column;
+          gap: 30px;
+        }
+
+        .footer-bottom {
+          text-align: center;
+        }
+      }
+      @media (max-width: 768px) {
+        .nav {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 10px;
+        }
+
+        .left,
+        .right {
+          width: 100%;
+          justify-content: space-between;
+          padding: 0 20px;
+        }
+
+        .nav-items,
+        .credentials {
+          gap: 16px;
+        }
+
+        .hero img {
+          height: 60vh;
+        }
+
+        .products {
+          padding: 20px;
+          gap: 20px;
+        }
+
+        .product {
+          width: 100%;
+        }
+
+        .product img {
+          width: 100%;
+          height: auto;
+        }
+
+        .newsletter-input {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+        }
+
+        .newsletter-input input {
+          width: 100%;
+        }
+
+        .newsletter-input button {
+          align-self: flex-end;
+        }
+      }
+      .hamburger {
+        display: none;
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      .mobile-menu {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        background: white;
+        padding: 20px;
+        font-size: 16px;
+        border-top: 1px solid #ddd;
+      }
+
+      /* Mobile view settings */
+      @media (max-width: 768px) {
+        .nav-items {
+          display: none;
+        }
+
+        .hamburger {
+          display: block;
+        }
+
+        .mobile-menu.show {
+          display: flex;
+        }
+
+        .nav {
+          flex-direction: row;
+          align-items: center;
+          padding: 10px 20px;
+        }
+
+        .left {
+          width: auto;
+          padding-left: 0;
+        }
+
+        .logo {
+          padding-left: 0;
+        }
+
+        .right {
+          width: auto;
+          gap: 15px;
+          align-items: center;
+        }
+      }
     </style>
     <div class="nav-top"></div>
-    <div class="nav">
+    <!-- <div class="nav">
       <div class="left">
         <div class="logo">
           <h1>Ecomm</h1>
@@ -366,7 +522,34 @@
           <p>Cart (0)</p>
         </div>
       </div>
+    </div> -->
+
+    <div class="nav">
+      <div class="left">
+        <div class="logo"><h1>Ecomm</h1></div>
+        <div class="nav-items">
+          <p>All Products</p>
+          <p>Shop</p>
+        </div>
+      </div>
+      <div class="right">
+        <div class="credentials">
+          <p>Login</p>
+          <p>Cart (0)</p>
+        </div>
+        <div class="hamburger">&#9776;</div>
+      </div>
     </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div class="mobile-menu">
+      <p>All Products</p>
+      <p>Shop</p>
+      <p>Gift</p>
+      <p>Body Care</p>
+      <p>Hand Care</p>
+    </div>
+
     <div class="hero">
       <img src="./Images/1.webp" alt="" />
     </div>
