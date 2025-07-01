@@ -733,6 +733,10 @@ a:hover {
     display: block;
 }
 
+.hover-img {
+    transition: opacity 0.3s ease;
+}
+
 /* ========== 4. Second Page ========== */
 .second-page {
     width: 100%;
