@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./Fonts/Gilroy-Light.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy Bold';
+    src: url('./Fonts/Gilroy-ExtraBold.otf');
+}
+
+body {
+    font-family: Gilroy;
+}
+
+.nav-top {
+    width: 100%;
+    height: 45px;
+    background-color: black;
+}
+
+.left {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-items {
+    display: flex;
+    gap: 30px;
+    background-color: red;
+}
+
+.hero img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    overflow: hidden;
+}
