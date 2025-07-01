@@ -416,3 +416,29 @@ a:hover {
         display: none;
     }
 }
+
+/* Default: hide hamburger on desktop */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Mobile view: show and fix it to top-right */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 1px;
+        right: 16px;
+        z-index: 1000;
+        /* Optional for visibility */
+        padding: 8px 12px;
+        border-radius: 4px;
+    }
+
+    /* Hide Login and Cart */
+    .credentials {
+        display: none;
+    }
+}
