@@ -112,6 +112,32 @@ a:hover {
     width: 25%;
 }
 
+
+/* ========== 6. Products ========== */
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+
+.product {
+    width: 400px;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.product img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+
 /* ========== 8. Footer ========== */
 .footer {
     padding: 60px 5%;
