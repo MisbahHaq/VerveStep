@@ -26,17 +26,39 @@ body {
     background-color: black;
 }
 
-.left {
-    width: 20%;
+.nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    background-color: transparent;
+}
+
+.left {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    padding-left: 50px;
 }
 
 .nav-items {
     display: flex;
     gap: 30px;
-    background-color: red;
+}
+
+.right {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.credentials {
+    display: flex;
+    gap: 30px;
 }
 
 .hero img {
