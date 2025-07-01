@@ -59,11 +59,19 @@ body {
     cursor: pointer;
 }
 
-.right {
+/* .right {
     width: 40%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+} */
+
+.right {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 30px;
 }
 
 .credentials {
