@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+    <link rel="stylesheet" href="product.css" />
+  </head>
+  <body>
+    <div class="nav-top"></div>
+    <div class="nav">
+      <div class="left">
+        <div class="logo"><h1>Ecomm</h1></div>
+        <div class="nav-items">
+          <a href="./index.html"><p>Home</p></a>
+          <a href="./shop.html"><p>All Products</p></a>
+          <a href="./gift.html"> <p>Gift Box</p></a>
+        </div>
+      </div>
+      <div class="right">
+        <div class="credentials">
+          <p>Login</p>
+          <p>Cart (0)</p>
+        </div>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="./index.html"><p>Home</p></a>
+      <a href="./shop.html"><p>All Products</p></a>
+      <a href="./gift.html"> <p>Gift Box</p></a>
+      <p>Body Care</p>
+      <p>Hand Care</p>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h4>Help & Support</h4>
+          <ul>
+            <li>About RUSTIC</li>
+            <li>FAQ</li>
+            <li>Inquiry</li>
+            <li>
+              Description based on the Specified Commercial Transactions Act
+            </li>
+            <li>Terms of Service</li>
+            <li>Privacy Policy</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Social Media</h4>
+          <ul>
+            <li>Instagram</li>
+            <li>LINE</li>
+            <li>Pinterest</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Add LINE friends to get a 10% off coupon</h4>
+          <p><a href="#">Add LINE</a></p>
+        </div>
+
+        <div class="footer-col newsletter">
+          <h4>Newsletter</h4>
+          <p class="desc">
+            By registering for email subscription, you will be able to receive
+            announcements from RUSTIC and information exclusive to email
+            members.
+          </p>
+          <div class="newsletter-input">
+            <input type="email" placeholder="Email" />
+            <button>&rarr;</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© RUSTIC All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var hamburger = document.getElementById("hamburger");
+        var mobileMenu = document.getElementById("mobileMenu");
+        if (hamburger && mobileMenu) {
+          hamburger.addEventListener("click", function () {
+            mobileMenu.classList.toggle("show");
+          });
+        }
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.getElementById("hamburger");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        if (hamburger && mobileMenu) {
+          hamburger.addEventListener("click", function () {
+            mobileMenu.classList.toggle("show");
+          });
+        }
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
