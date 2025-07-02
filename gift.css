@@ -42,11 +42,6 @@ a:hover {
 }
 
 /* ========== 2. Layout: Header & Navigation ========== */
-.nav-top {
-    width: 100%;
-    height: 45px;
-    background-color: black;
-}
 
 .nav {
     display: flex;
@@ -129,8 +124,6 @@ a:hover {
     margin-right: 90px;
 }
 
-
-
 /* ========== 6. Products ========== */
 .products {
     display: flex;
@@ -154,7 +147,6 @@ a:hover {
     margin-bottom: 15px;
     padding: 10px;
 }
-
 
 /* ========== 8. Footer ========== */
 .footer {

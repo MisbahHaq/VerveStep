@@ -475,11 +475,6 @@ a:hover {
 }
 
 /* ========== 3. Navigation Bar ========== */
-.nav-top {
-    width: 100%;
-    height: 45px;
-    background-color: black;
-}
 
 .nav {
     display: flex;
