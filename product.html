@@ -1,1275 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product</title>
     <link rel="stylesheet" href="product.css" />
-</head>
+  </head>
 
-<body>
-
-    <style>
-        /* ========== 1. Global Resets & Fonts ========== */
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --spacing-xs: 4px;
-    --spacing-sm: 8px;
-    --spacing-md: 16px;
-    --spacing-lg: 24px;
-    --spacing-xl: 32px;
-    --spacing-xxl: 48px;
-
-    --font-size-small: 12px;
-    --font-size-base: 14px;
-    --font-size-medium: 16px;
-    --font-size-large: 20px;
-    --font-size-xl: 28px;
-
-    --primary-color: #000;
-    --secondary-color: #666;
-    --accent-color: #dc3545;
-    --success-color: #28a745;
-    --border-color: #e0e0e0;
-    --light-gray: #f9f9f9;
-    --transition: 0.3s ease-in-out;
-}
-
-@font-face {
-    font-family: "Gilroy";
-    src: url("./Fonts/Gilroy-Light.otf");
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: "Gilroy Bold";
-    src: url("./Fonts/Gilroy-ExtraBold.otf");
-}
-
-body {
-    font-family: Gilroy, sans-serif;
-    background-color: rgb(255, 255, 255);
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-body.loaded {
-    opacity: 1;
-}
-
-a {
-    text-decoration: none;
-    color: #000;
-}
-
-a:hover {
-    transition: all 0.3s ease-in-out;
-}
-
-/* ========== 2. Layout: Header & Navigation ========== */
-.nav-top {
-    width: 100%;
-    height: 45px;
-    background-color: black;
-}
-
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: transparent;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    padding: 0 40px;
-}
-
-.left {
-    width: 40%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    padding-left: 50px;
-}
-
-.nav-items {
-    display: flex;
-    gap: 30px;
-}
-
-.nav-items a:hover,
-.credentials a:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.right {
-    margin-right: 20px;
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    gap: 30px;
-}
-
-.credentials {
-    display: flex;
-    gap: 30px;
-}
-
-.main .left {
-    width: 50%;
-    height: auto;
-    justify-content: right;
-    align-items: center;
-}
-
-.main-img img {
-    width: 592px;
-    height: 592px;
-    object-fit: cover;
-}
-
-.main .right {
-    width: 50%;
-    height: auto;
-    justify-content: left;
-    align-items: center;
-}
-
-/* ========== 8. Footer ========== */
-.footer {
-    padding: 60px 5%;
-    background-color: #fff;
-    font-family: Gilroy, sans-serif;
-    font-size: 14px;
-    color: #000;
-}
-
-.footer-columns {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 40px;
-}
-
-.footer-col {
-    flex: 1;
-    min-width: 200px;
-}
-
-.footer-col h4 {
-    font-size: 16px;
-    margin-bottom: 15px;
-}
-
-.footer-col ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-col ul li {
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-
-.footer-col ul li:hover {
-    text-decoration: underline;
-}
-
-.footer-col a {
-    text-decoration: underline;
-    color: #000;
-}
-
-.newsletter .desc {
-    font-size: 12px;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.newsletter-input {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #000;
-    width: 100%;
-    max-width: 300px;
-}
-
-.newsletter-input input {
-    flex: 1;
-    border: none;
-    outline: none;
-    background: transparent;
-    padding: 8px;
-    font-size: 14px;
-    color: #000;
-}
-
-.newsletter-input input::placeholder {
-    color: #aaa;
-}
-
-.newsletter-input button {
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    color: #000;
-}
-
-.footer-bottom {
-    margin-top: 60px;
-    text-align: right;
-    font-size: 12px;
-    color: #666;
-}
-
-/* ========== 9. Hamburger (Default) ========== */
-.hamburger {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-/* ========== 10. Media Queries ========== */
-
-/* Tablet */
-@media (max-width: 1024px) {
-    .nav {
-        padding: 0 20px;
-    }
-
-    .concept {
-        flex-direction: column;
-        padding: 20px;
-        margin-top: 120px;
-    }
-
-    .con-left,
-    .con-right {
-        width: 100%;
-    }
-
-    .con-img img {
-        width: 100%;
-        height: auto;
-    }
-
-    .fourth-page {
-        flex-direction: column;
-        height: auto;
-        padding: 0 5%;
-        margin-bottom: 100px;
-    }
-
-    .left-col,
-    .right-col {
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .left-big-box,
-    .right-big-box {
-        width: 48%;
-    }
-
-    .gift-page {
-        flex-direction: column;
-        height: auto;
-        text-align: center;
-        padding: 0 2%;
-    }
-
-    .right-gift {
-        font-size: 18px;
-    }
-
-    .footer-columns {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .footer-bottom {
-        text-align: center;
-    }
-
-    .products {
-        gap: 24px;
-        padding: 30px;
-    }
-
-    .product {
-        width: 45%;
-    }
-
-    .product img {
-        width: 100%;
-        height: auto;
-    }
-}
-
-.middle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 50px;
-    flex-wrap: wrap;
-    padding: 0 20px;
-}
-
-.middle img {
-    width: 500px;
-    max-width: 100%;
-    height: auto;
-}
-
-.middle-text {
-    max-width: 600px;
-}
-
-.middle-text h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-@media (max-width: 768px) {
-    .middle {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .middle-text h1 {
-        font-size: 24px;
-    }
-
-    .middle-text p {
-        font-size: 16px;
-    }
-}
-
-.middle-text p {
-    font-size: 20px;
-    line-height: 1.6;
-}
-
-/* Hide mobile menu on desktop */
-@media (min-width: 769px) {
-    .mobile-menu {
-        display: none !important;
-    }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-    .nav {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px 10px 0 10px;
-    }
-
-    .left,
-    .right {
-        width: 100%;
-        justify-content: space-between;
-        padding: 0 10px;
-    }
-
-    .logo {
-        padding-left: 0;
-    }
-
-    .nav-items,
-    .credentials {
-        gap: 16px;
-    }
-
-    .nav-items {
-        display: none;
-    }
-
-    .credentials {
-        display: none;
-    }
-
-    .hamburger {
-        display: block;
-        position: absolute;
-        top: 1px;
-        right: 16px;
-        z-index: 1000;
-        padding: 8px 12px;
-        border-radius: 4px;
-    }
-
-    .mobile-menu {
-        display: none;
-        flex-direction: column;
-        gap: 15px;
-        background: white;
-        padding: 20px;
-        font-size: 16px;
-        border-top: 1px solid #ddd;
-    }
-
-    .mobile-menu.show {
-        display: flex;
-    }
-
-    .hero img {
-        height: 40vh;
-    }
-
-    .concept {
-        margin-top: 60px;
-        padding: 10px;
-    }
-
-    .con-left,
-    .con-right {
-        width: 100%;
-    }
-
-    .con-img img {
-        width: 100%;
-        height: auto;
-    }
-
-    .nav-prod {
-        flex-direction: column;
-        height: auto;
-        gap: 10px;
-    }
-
-    .products {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-        gap: 16px;
-    }
-
-    .product {
-        width: 100%;
-    }
-
-    .product img {
-        width: 100%;
-        height: auto;
-    }
-
-    .fourth-page {
-        flex-direction: column;
-        height: auto;
-        padding: 0 2%;
-        margin-bottom: 60px;
-    }
-
-    .left-col,
-    .right-col {
-        width: 100%;
-        flex-direction: column;
-    }
-
-    .left-big-box,
-    .right-big-box {
-        width: 100%;
-    }
-
-    .gift-page {
-        flex-direction: column;
-        height: auto;
-        text-align: center;
-        padding: 0 2%;
-        gap: 20px;
-    }
-
-    .right-gift {
-        font-size: 16px;
-    }
-
-    .footer {
-        padding: 30px 2%;
-    }
-
-    .footer-columns {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .footer-col {
-        min-width: 0;
-    }
-
-    .newsletter-input {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        max-width: 100%;
-    }
-
-    .newsletter-input input {
-        width: 100%;
-    }
-
-    .newsletter-input button {
-        align-self: flex-end;
-    }
-
-    .footer-bottom {
-        text-align: center;
-    }
-}
-
-/* Initial hidden state */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-/* When visible */
-.fade-in.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--spacing-md);
-}
-
-/* Promotion Banner */
-.promo-banner {
-    background-color: var(--accent-color);
-    color: white;
-    text-align: center;
-    padding: var(--spacing-sm) 0;
-    font-size: var(--font-size-small);
-}
-
-.promo-banner p {
-    margin: 0;
-}
-
-.promo-banner i {
-    margin-left: var(--spacing-xs);
-}
-
-/* Header */
-.header {
-    background-color: #fff;
-    border-bottom: 1px solid var(--border-color);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: var(--spacing-md) 0;
-}
-
-.logo h1 {
-    font-size: var(--font-size-xl);
-    font-weight: 300;
-    letter-spacing: 2px;
-}
-
-/* 
-.nav {
-    display: flex;
-    gap: var(--spacing-xl);
-} */
-
-.nav-link {
-    text-decoration: none;
-    color: var(--primary-color);
-    font-size: var(--font-size-base);
-    transition: color var(--transition);
-}
-
-.nav-link:hover {
-    color: var(--secondary-color);
-}
-
-.header-actions {
-    display: flex;
-    gap: var(--spacing-lg);
-    align-items: center;
-}
-
-.action-link,
-.cart-link {
-    text-decoration: none;
-    color: var(--primary-color);
-    font-size: var(--font-size-base);
-    transition: color var(--transition);
-}
-
-.action-link:hover,
-.cart-link:hover {
-    color: var(--secondary-color);
-}
-
-/* Main Content */
-.main {
-    padding: var(--spacing-xxl) 0;
-}
-
-.product-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-xxl);
-    align-items: start;
-}
-
-/* Product Images */
-.product-images {
-    position: sticky;
-    top: 120px;
-}
-
-.main-image {
-    position: relative;
-    background-color: var(--light-gray);
-    border-radius: var(--border-radius);
-    margin-bottom: var(--spacing-md);
-    overflow: hidden;
-}
-
-.main-image img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    display: block;
-}
-
-.award-badge {
-    position: absolute;
-    top: var(--spacing-lg);
-    left: var(--spacing-lg);
-    background-color: rgba(220, 53, 69, 0.9);
-    color: white;
-    padding: var(--spacing-sm) var(--spacing-md);
-    border-radius: var(--border-radius);
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-    font-size: var(--font-size-small);
-    font-weight: 600;
-}
-
-.award-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.2;
-}
-
-.thumbnail-images {
-    display: flex;
-    gap: var(--spacing-sm);
-}
-
-.thumbnail {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    border: 2px solid transparent;
-    transition: border-color var(--transition);
-}
-
-.thumbnail:hover,
-.thumbnail.active {
-    border-color: var(--accent-color);
-}
-
-/* Product Details */
-.product-details {
-    padding-left: var(--spacing-lg);
-}
-
-.product-title {
-    font-size: var(--font-size-xl);
-    font-weight: 400;
-    margin-bottom: var(--spacing-lg);
-    line-height: 1.3;
-}
-
-.product-price {
-    margin-bottom: var(--spacing-xl);
-}
-
-.price {
-    font-size: var(--font-size-large);
-    font-weight: 600;
-    margin-right: var(--spacing-sm);
-}
-
-.tax-info {
-    font-size: var(--font-size-small);
-    color: var(--secondary-color);
-}
-
-/* Packing Section */
-.packing-section {
-    margin-bottom: var(--spacing-xl);
-}
-
-.packing-section h3 {
-    font-size: var(--font-size-base);
-    font-weight: 400;
-    margin-bottom: var(--spacing-md);
-}
-
-.checkbox-wrapper {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    font-size: var(--font-size-base);
-}
-
-.checkbox-wrapper input[type="checkbox"] {
-    display: none;
-}
-
-.checkmark {
-    width: 18px;
-    height: 18px;
-    border: 1px solid var(--border-color);
-    margin-right: var(--spacing-sm);
-    position: relative;
-    transition: all var(--transition);
-}
-
-.checkbox-wrapper input[type="checkbox"]:checked+.checkmark {
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
-}
-
-.checkbox-wrapper input[type="checkbox"]:checked+.checkmark::after {
-    content: '✓';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 12px;
-}
-
-/* Add to Cart Button */
-.add-to-cart-btn {
-    width: 100%;
-    background-color: var(--accent-color);
-    color: white;
-    border: none;
-    padding: var(--spacing-md) var(--spacing-lg);
-    font-size: var(--font-size-medium);
-    font-weight: 500;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    transition: all var(--transition);
-    margin-bottom: var(--spacing-xl);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.add-to-cart-btn:hover {
-    background-color: var(--primary-color);
-    transform: translateY(-1px);
-}
-
-.add-to-cart-btn:active {
-    transform: translateY(0);
-}
-
-.add-to-cart-btn.added {
-    background-color: var(--success-color);
-}
-
-/* Product Description */
-.product-description {
-    font-size: var(--font-size-base);
-    line-height: 1.7;
-    color: var(--secondary-color);
-    margin-bottom: var(--spacing-xl);
-    padding-bottom: var(--spacing-xl);
-    border-bottom: 1px solid var(--border-color);
-}
-
-/* Expandable Sections */
-.expandable-sections {
-    border-top: 1px solid var(--border-color);
-}
-
-.section {
-    border-bottom: 1px solid var(--border-color);
-}
-
-.section-header {
-    width: 100%;
-    background: none;
-    border: none;
-    padding: var(--spacing-lg) 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    font-size: var(--font-size-base);
-    color: var(--primary-color);
-    transition: color var(--transition);
-}
-
-.section-header:hover {
-    color: var(--secondary-color);
-}
-
-.section-header i {
-    transition: transform var(--transition);
-}
-
-.section-header.active i {
-    transform: rotate(180deg);
-}
-
-.section-content {
-    padding: 0 0 var(--spacing-lg) 0;
-    color: var(--secondary-color);
-    font-size: var(--font-size-base);
-    line-height: 1.6;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height var(--transition), padding var(--transition);
-}
-
-.section-content.active {
-    max-height: 500px;
-    padding: 0 0 var(--spacing-lg) 0;
-}
-
-.section-content p {
-    margin-bottom: var(--spacing-sm);
-}
-
-.section-content p:last-child {
-    margin-bottom: 0;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-        gap: var(--spacing-md);
-    }
-
-    .nav {
-        gap: var(--spacing-lg);
-    }
-
-    .product-layout {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-lg);
-    }
-
-    .product-details {
-        padding-left: 0;
-    }
-
-    .main-image {
-        position: static;
-    }
-
-    .thumbnail-images {
-        justify-content: center;
-    }
-
-    .container {
-        padding: 0 var(--spacing-sm);
-    }
-}
-
-@media (max-width: 480px) {
-    .award-badge {
-        position: static;
-        margin-bottom: var(--spacing-md);
-        justify-content: center;
-    }
-
-    .header-actions {
-        gap: var(--spacing-md);
-    }
-
-    .nav {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .product-title {
-        font-size: var(--font-size-large);
-    }
-}
-
-/* Loading Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.product-layout {
-    animation: fadeIn 0.6s ease-out;
-}
-
-/* Hover Effects */
-.thumbnail:hover {
-    transform: scale(1.05);
-}
-
-.nav-link:hover,
-.action-link:hover,
-.cart-link:hover {
-    transform: translateY(-1px);
-}
-
-.products {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    padding: 10px;
-}
-
-.product {
-    width: 350px;
-    text-align: center;
-    font-size: 14px;
-    margin-bottom: 30px;
-}
-
-.product img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    margin-bottom: 15px;
-    padding: 10px;
-}
-
-.other-page {
-    display: flex;
-    justify-content: center;
-    margin: 50px 50px;
-}
-
-.other-prod p {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-}
-
-.prod {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-    </style>
+  <body>
+    <!-- Navigation -->
     <div class="nav-top"></div>
     <div class="nav">
-        <div class="left">
-            <div class="logo">
-                <h1>Ecomm</h1>
-            </div>
-            <div class="nav-items">
-                <a href="./index.html">
-                    <p>Home</p>
-                </a>
-                <a href="./shop.html">
-                    <p>All Products</p>
-                </a>
-                <a href="./gift.html">
-                    <p>Gift Box</p>
-                </a>
-            </div>
-        </div>
-        <div class="right">
-            <div class="credentials">
-                <p>Login</p>
-                <p>Cart (0)</p>
-            </div>
-            <div class="hamburger" id="hamburger">&#9776;</div>
-        </div>
-    </div>
-
-    <!-- Mobile Dropdown Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="./index.html">
-            <p>Home</p>
-        </a>
-        <a href="./shop.html">
-            <p>All Products</p>
-        </a>
-        <a href="./gift.html">
-            <p>Gift Box</p>
-        </a>
-        <p>Body Care</p>
-        <p>Hand Care</p>
-    </div>
-
-    <!-- Main Content -->
-    <main class="main">
-        <div class="container">
-            <div class="product-layout">
-                <!-- Product Images -->
-                <div class="product-images">
-                    <div class="main-image">
-                        <div class="award-badge">
-                            <div class="award-icon">
-                                <i class="fas fa-award"></i>
-                            </div>
-                        </div>
-                        <img id="main-product-image" src="./Images/temp1.webp" alt="Aromatic Hand Wash" />
-                    </div>
-                    <div class="thumbnail-images">
-                        <img class="thumbnail active" src="./Images/p3.webp" alt="Product view 1" />
-                        <img class="thumbnail" src="./Images/p5.webp" alt="Product view 2" />
-                        <img class="thumbnail" src="./Images/g3.webp" alt="Product view 3" />
-                        <img class="thumbnail" src="./Images/4.webp" alt="Product view 4" />
-                    </div>
-                </div>
-
-                <!-- Product Details -->
-                <div class="product-details">
-                    <h1 class="product-title">Aromatic Hand Wash / Foggy Woods / 300mL</h1>
-
-                    <div class="product-price">
-                        <span class="price">¥3,430</span>
-                        <span class="tax-info">(tax included)</span>
-                    </div>
-
-                    <!-- Packing Options -->
-                    <div class="packing-section">
-                        <h3>packing</h3>
-                        <label class="checkbox-wrapper">
-                            <input type="checkbox" id="gift-wrapping" />
-                            <span class="checkmark"></span>
-                            <span class="checkbox-text">Gift wrapping +¥300 (tax included)</span>
-                        </label>
-                    </div>
-
-                    <!-- Add to Cart Button -->
-                    <button id="add-to-cart" class="add-to-cart-btn">Add to Cart</button>
-
-                    <!-- Product Description -->
-                    <div class="product-description">
-                        <p>Contains 99.4% natural ingredients. Moisturizes and leaves your hands feeling light and
-                            smooth after washing. The scent of essential oils based on cedarwood, ylang-ylang, and
-                            mandarin evokes the scent of flowers and fresh fruits blooming in a misty forest. Feel the
-                            gentle sunlight shining through the forest with your fingertips.</p>
-                    </div>
-
-                    <!-- Expandable Sections -->
-                    <div class="expandable-sections">
-                        <div class="section">
-                            <button class="section-header" data-section="specification">
-                                <span>Specification</span>
-                                <i class="fas fa-chevron-down"></i>
-                            </button>
-                            <div class="section-content" id="specification">
-                                <p><strong>Volume:</strong> 300mL</p>
-                                <p><strong>Ingredients:</strong> 99.4% natural ingredients including cedarwood,
-                                    ylang-ylang, and mandarin essential oils</p>
-                                <p><strong>Scent:</strong> Foggy Woods - floral and fresh fruit notes</p>
-                                <p><strong>Type:</strong> Hand wash with moisturizing properties</p>
-                            </div>
-                        </div>
-
-                        <div class="section">
-                            <button class="section-header" data-section="shipping">
-                                <span>Shipping</span>
-                                <i class="fas fa-chevron-down"></i>
-                            </button>
-                            <div class="section-content" id="shipping">
-                                <p><strong>Domestic Shipping:</strong> Free shipping on orders over ¥5,000</p>
-                                <p><strong>Delivery Time:</strong> 3-5 business days</p>
-                                <p><strong>International Shipping:</strong> Available to select countries</p>
-                                <p><strong>Express Delivery:</strong> Next day delivery available in Tokyo area</p>
-                            </div>
-                        </div>
-
-                        <div class="section">
-                            <button class="section-header" data-section="gift-wrap">
-                                <span>Gift wrapping</span>
-                                <i class="fas fa-chevron-down"></i>
-                            </button>
-                            <div class="section-content" id="gift-wrap">
-                                <p><strong>Premium Gift Wrapping:</strong> ¥300 (tax included)</p>
-                                <p>Beautiful minimalist wrapping with our signature ribbon</p>
-                                <p><strong>Gift Message:</strong> Include a personalized message card</p>
-                                <p><strong>Eco-Friendly:</strong> Made from recycled materials</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-    </div>
-
-    <div class="middle">
-        <h1 class="mid">Creation</h1>
-        <p class="mid"> Ecomm offers products that can be used for as long as possible, that you will not tire of, and that are as
-            natural as possible. Based on ethical choices, it contains 99.4% naturally derived ingredients and has 11
-            free formulas. (Does not contain 1 to 11: 1. Alcohol, 2. Paraben, 3. Mineral oil, 4. Synthetic coloring, 5.
-            Synthetic fragrance, 6. Petroleum-based surfactant, 7. UV absorber, 8. Silicone, 9. Petroleum-based oil, 10.
-            Synthetic polymer, 11. Animal-derived raw materials)
-            The bottle is made of 100% recycled PET, and the packaging is made of paper made from sugarcane pomace. It
-            has a simple and sophisticated appearance so that the ever-changing appearance over time will be seen as an
-            attractive feature.</p>
-            <img src="./Images/use.webp" alt="">
-    </div>
-
-    <div class="middle">
-        <img src="./Images/h.webp" alt="">
-        <div class="middle-text">
-          <h1 class="mid">How to Use</h1>
-          <p>Take an appropriate amount in your hands, lather well, then wash your hands and rinse thoroughly with water or lukewarm water.</p>
+      <div class="left">
+        <div class="logo"><h1>Ecomm</h1></div>
+        <div class="nav-items">
+          <a href="./index.html"><p>Home</p></a>
+          <a href="./shop.html"><p>All Products</p></a>
+          <a href="./gift.html"><p>Gift Box</p></a>
         </div>
       </div>
-      
-
-    <div class="other-page">
-        <div class="other-prod">
-            <p>Other Recommended Products</p>
+      <div class="right">
+        <div class="credentials">
+          <p>Login</p>
+          <p>Cart (0)</p>
         </div>
-    </div>
-    
-    <div class="prod">
-        <div class="product">
-            <img
-              src="./Images/p6.webp"
-              data-hover="./Images/temp11.webp"
-              .
-              alt="Product 1"
-              class="fade-in hover-img"
-            />
-            <p>Gift Box / Hand Wash & Hand Cream / Foggy Woods</p>
-          </div>
-          <div class="product">
-            <img
-              src="./Images/12.webp"
-              data-hover="./Images/temp16.webp"
-              .
-              alt="Product 1"
-              class="fade-in hover-img"
-            />
-            <p>Gift Box / Hand Wash & Hand Cream / Foggy Woods</p>
-          </div>
-          <div class="product">
-            <img
-              src="./Images/p3.webp"
-              data-hover="/Images/temp6.webp"
-              .
-              alt="Product 1"
-              class="fade-in hover-img"
-            />
-            <p>Aromatic Body Wash / Foggy Woods / 300mL</p>
-          </div>
-          <div class="product">
-            <img
-              src="./Images/8.webp"
-              data-hover="/Images/temp9.jpg"
-              .
-              alt="Product 1"
-              class="fade-in hover-img"
-            />
-            <p>Gift Box / Hand Wash & Hand Cream / Foggy Woods</p>
-          </div>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+      </div>
     </div>
 
-    <footer class="footer">
-        <div class="footer-columns">
-            <div class="footer-col">
-                <h4>Help & Support</h4>
-                <ul>
-                    <li>About RUSTIC</li>
-                    <li>FAQ</li>
-                    <li>Inquiry</li>
-                    <li>
-                        Description based on the Specified Commercial Transactions Act
-                    </li>
-                    <li>Terms of Service</li>
-                    <li>Privacy Policy</li>
-                </ul>
+    <!-- Mobile Dropdown -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="./index.html"><p>Home</p></a>
+      <a href="./shop.html"><p>All Products</p></a>
+      <a href="./gift.html"><p>Gift Box</p></a>
+      <p>Body Care</p>
+      <p>Hand Care</p>
+    </div>
+
+    <!-- Main Product Content -->
+    <main class="main">
+      <div class="container">
+        <div class="product-layout">
+          <!-- Images -->
+          <div class="product-images">
+            <div class="main-image">
+              <div class="award-badge">
+                <div class="award-icon"><i class="fas fa-award"></i></div>
+              </div>
+              <img
+                id="main-product-image"
+                src="./Images/temp1.webp"
+                alt="Aromatic Hand Wash"
+              />
+            </div>
+            <div class="thumbnail-images">
+              <img
+                class="thumbnail active"
+                src="./Images/p3.webp"
+                alt="Product view 1"
+              />
+              <img
+                class="thumbnail"
+                src="./Images/p5.webp"
+                alt="Product view 2"
+              />
+              <img
+                class="thumbnail"
+                src="./Images/g3.webp"
+                alt="Product view 3"
+              />
+              <img
+                class="thumbnail"
+                src="./Images/4.webp"
+                alt="Product view 4"
+              />
+            </div>
+          </div>
+
+          <!-- Product Info -->
+          <div class="product-details">
+            <h1 class="product-title">
+              Aromatic Hand Wash / Foggy Woods / 300mL
+            </h1>
+            <div class="product-price">
+              <span class="price">¥3,430</span>
+              <span class="tax-info">(tax included)</span>
             </div>
 
-            <div class="footer-col">
-                <h4>Social Media</h4>
-                <ul>
-                    <li>Instagram</li>
-                    <li>LINE</li>
-                    <li>Pinterest</li>
-                </ul>
+            <div class="packing-section">
+              <h3>packing</h3>
+              <label class="checkbox-wrapper">
+                <input type="checkbox" id="gift-wrapping" />
+                <span class="checkmark"></span>
+                <span class="checkbox-text"
+                  >Gift wrapping +¥300 (tax included)</span
+                >
+              </label>
             </div>
 
-            <div class="footer-col">
-                <h4>Add LINE friends to get a 10% off coupon</h4>
-                <p><a href="#">Add LINE</a></p>
+            <button id="add-to-cart" class="add-to-cart-btn">
+              Add to Cart
+            </button>
+
+            <div class="product-description">
+              <p>
+                Contains 99.4% natural ingredients. Moisturizes and leaves your
+                hands feeling light and smooth after washing. The scent of
+                essential oils based on cedarwood, ylang-ylang, and mandarin
+                evokes the scent of flowers and fresh fruits blooming in a misty
+                forest.
+              </p>
             </div>
 
-            <div class="footer-col newsletter">
-                <h4>Newsletter</h4>
-                <p class="desc">
-                    By registering for email subscription, you will be able to receive
-                    announcements from RUSTIC and information exclusive to email
-                    members.
-                </p>
-                <div class="newsletter-input">
-                    <input type="email" placeholder="Email" />
-                    <button>&rarr;</button>
+            <!-- Expandable Sections -->
+            <div class="expandable-sections hide-on-mobile">
+              <div class="section">
+                <button class="section-header" data-section="specification">
+                  <span>Specification</span>
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="section-content" id="specification">
+                  <p><strong>Volume:</strong> 300mL</p>
+                  <p>
+                    <strong>Ingredients:</strong> 99.4% natural ingredients
+                    including cedarwood, ylang-ylang, and mandarin essential
+                    oils
+                  </p>
+                  <p><strong>Scent:</strong> Foggy Woods</p>
+                  <p><strong>Type:</strong> Hand wash</p>
                 </div>
+              </div>
+
+              <div class="section">
+                <button class="section-header" data-section="shipping">
+                  <span>Shipping</span>
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="section-content" id="shipping">
+                  <p><strong>Domestic Shipping:</strong> Free over ¥5,000</p>
+                  <p><strong>Delivery:</strong> 3–5 days</p>
+                  <p><strong>International:</strong> Selected countries</p>
+                </div>
+              </div>
+
+              <div class="section">
+                <button class="section-header" data-section="gift-wrap">
+                  <span>Gift wrapping</span>
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="section-content" id="gift-wrap">
+                  <p><strong>Price:</strong> ¥300 (tax included)</p>
+                  <p>
+                    Minimalist wrap, signature ribbon, eco-friendly materials
+                  </p>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-        <div class="footer-bottom">
-            <p>© RUSTIC All rights reserved.</p>
+      </div>
+    </main>
+
+    <!-- Creation Section -->
+    <div class="middle">
+      <h1 class="mid">Creation</h1>
+      <p class="mid">
+        Ecomm offers products as natural as possible. 99.4% naturally derived
+        ingredients. Bottle is made from 100% recycled PET. Packaging is
+        sugarcane paper. Free from 11 harmful ingredients.
+      </p>
+      <img src="./Images/use.webp" alt="How it's made" />
+    </div>
+
+    <!-- How to Use Section -->
+    <div class="middle">
+      <img src="./Images/h.webp" alt="How to Use" />
+      <div class="middle-text">
+        <h1 class="mid">How to Use</h1>
+        <p>
+          Take an appropriate amount in your hands, lather well, then wash and
+          rinse thoroughly.
+        </p>
+      </div>
+    </div>
+
+    <!-- Recommendations -->
+    <div class="other-page">
+      <div class="other-prod"><p>Other Recommended Products</p></div>
+    </div>
+
+    <div class="prod">
+      <div class="product">
+        <img
+          src="./Images/p6.webp"
+          data-hover="./Images/temp11.webp"
+          alt="Gift Box"
+          class="fade-in hover-img"
+        />
+        <p>Gift Box / Hand Wash & Hand Cream / Foggy Woods</p>
+      </div>
+      <div class="product">
+        <img
+          src="./Images/12.webp"
+          data-hover="./Images/temp16.webp"
+          alt="Gift Box"
+          class="fade-in hover-img"
+        />
+        <p>Gift Box / Hand Wash & Hand Cream / Foggy Woods</p>
+      </div>
+      <div class="product">
+        <img
+          src="./Images/p3.webp"
+          data-hover="./Images/temp6.webp"
+          alt="Body Wash"
+          class="fade-in hover-img"
+        />
+        <p>Aromatic Body Wash / Foggy Woods / 300mL</p>
+      </div>
+      <div class="product">
+        <img
+          src="./Images/8.webp"
+          data-hover="./Images/temp9.jpg"
+          alt="Gift Box"
+          class="fade-in hover-img"
+        />
+        <p>Gift Box / Hand Wash & Hand Cream / Foggy Woods</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h4>Help & Support</h4>
+          <ul>
+            <li>About RUSTIC</li>
+            <li>FAQ</li>
+            <li>Inquiry</li>
+            <li>
+              Description based on the Specified Commercial Transactions Act
+            </li>
+            <li>Terms of Service</li>
+            <li>Privacy Policy</li>
+          </ul>
         </div>
+        <div class="footer-col">
+          <h4>Social Media</h4>
+          <ul>
+            <li>Instagram</li>
+            <li>LINE</li>
+            <li>Pinterest</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Add LINE friends to get a 10% off coupon</h4>
+          <p><a href="#">Add LINE</a></p>
+        </div>
+        <div class="footer-col newsletter">
+          <h4>Newsletter</h4>
+          <p class="desc">
+            Subscribe to receive announcements and exclusive email offers.
+          </p>
+          <div class="newsletter-input">
+            <input type="email" placeholder="Email" />
+            <button>&rarr;</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>© RUSTIC All rights reserved.</p></div>
     </footer>
 
+    <!-- Scripts -->
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const hamburger = document.getElementById("hamburger");
-            const mobileMenu = document.getElementById("mobileMenu");
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.getElementById("hamburger");
+        const mobileMenu = document.getElementById("mobileMenu");
+        if (hamburger && mobileMenu) {
+          hamburger.addEventListener("click", () => {
+            mobileMenu.classList.toggle("show");
+          });
+        }
 
-            if (hamburger && mobileMenu) {
-                hamburger.addEventListener("click", function () {
-                    mobileMenu.classList.toggle("show");
-                });
-            }
+        const thumbnails = document.querySelectorAll(".thumbnail");
+        const mainImage = document.getElementById("main-product-image");
+
+        thumbnails.forEach((thumb) => {
+          thumb.addEventListener("click", () => {
+            mainImage.src = thumb.src;
+            thumbnails.forEach((t) => t.classList.remove("active"));
+            thumb.classList.add("active");
+          });
         });
+
+        if (thumbnails.length > 0 && thumbnails[0].src !== mainImage.src) {
+          mainImage.src = thumbnails[0].src;
+        }
+      });
     </script>
+
+    <!-- External JS (Optional but moved last) -->
     <script src="main.js"></script>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
