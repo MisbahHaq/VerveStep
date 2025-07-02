@@ -90,6 +90,20 @@ a:hover {
     gap: 30px;
 }
 
+.main .left {
+    background-color: red;
+    width: 50%;
+    height: auto;
+    justify-content: right;
+    align-items: center;
+}
+
+.main-img img {
+    width: 592px;
+    height: 592px;
+    object-fit: cover;
+}
+
 /* ========== 8. Footer ========== */
 .footer {
     padding: 60px 5%;
