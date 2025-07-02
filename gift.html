@@ -139,7 +139,7 @@
         <p>© RUSTIC All rights reserved.</p>
       </div>
     </footer>
-    <script>
+    <!-- <script>
       document.addEventListener("DOMContentLoaded", function () {
         var hamburger = document.getElementById("hamburger");
         var mobileMenu = document.getElementById("mobileMenu");
@@ -151,6 +151,18 @@
       });
     </script>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.getElementById("hamburger");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        if (hamburger && mobileMenu) {
+          hamburger.addEventListener("click", function () {
+            mobileMenu.classList.toggle("show");
+          });
+        }
+      });
+    </script> -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const hamburger = document.getElementById("hamburger");
