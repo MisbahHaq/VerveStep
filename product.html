@@ -289,5 +289,27 @@
         console.log(e);
       });
     </script>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+
+      const title = params.get("title");
+      const price = params.get("price");
+      const img = params.get("img");
+      const main = params.get("main");
+
+      if (title && price && img && main) {
+        document.querySelector(".product-title").textContent =
+          title + " / Foggy Woods / 300mL";
+        document.querySelector(".price").textContent = `¥${price}`;
+        document.getElementById("main-product-image").src = main;
+
+        const thumbnails = document.querySelectorAll(".thumbnail");
+        thumbnails.forEach((thumb, i) => {
+          if (i === 0) {
+            thumb.src = img;
+          }
+        });
+      }
+    </script>
   </body>
 </html>
