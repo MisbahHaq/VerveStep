@@ -189,7 +189,9 @@
 
     <!-- Recommendations -->
     <div class="other-page">
-      <div class="other-prod"><p>Other Recommended Products</p></div>
+      <div class="other-prod">
+        <p>Other Recommended Products</p>
+      </div>
     </div>
 
     <div class="prod">
@@ -270,19 +272,19 @@
           </div>
         </div>
       </div>
-      <div class="footer-bottom"><p>© RUSTIC All rights reserved.</p></div>
+      <div class="footer-bottom">
+        <p>© RUSTIC All rights reserved.</p>
+      </div>
     </footer>
 
     <script src="./script.js"></script>
     <script src="./main.js"></script>
     <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
     <script>
-      // Initialize Lenis
       const lenis = new Lenis({
         autoRaf: true,
       });
 
-      // Listen for the scroll event and log the event data
       lenis.on("scroll", (e) => {
         console.log(e);
       });
