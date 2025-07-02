@@ -35,13 +35,112 @@
       <p>Hand Care</p>
     </div>
 
-    <div class="main">
-      <div class="left">
-        <div class="main-img">
-          <img src="./Images/temp1.webp" alt="" />
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+          <div class="product-layout">
+            <!-- Product Images -->
+            <div class="product-images">
+              <div class="main-image">
+                <div class="award-badge">
+                  <div class="award-icon">
+                    <i class="fas fa-award"></i>
+                  </div>
+                </div>
+                <img id="main-product-image" src="./Images/temp1.webp" alt="Aromatic Hand Wash" />
+              </div>
+              <div class="thumbnail-images">
+                <img class="thumbnail active" src="./Images/p3.webp" alt="Product view 1" />
+                <img class="thumbnail" src="./Images/p5.webp" alt="Product view 2" />
+                <img class="thumbnail" src="./Images/g3.webp" alt="Product view 3" />
+                <img class="thumbnail" src="./Images/4.webp" alt="Product view 4" />
+              </div>
+            </div>
+
+            <!-- Product Details -->
+            <div class="product-details">
+              <h1 class="product-title">Aromatic Hand Wash / Foggy Woods / 300mL</h1>
+              
+              <div class="product-price">
+                <span class="price">¥3,430</span>
+                <span class="tax-info">(tax included)</span>
+              </div>
+
+              <!-- Packing Options -->
+              <div class="packing-section">
+                <h3>packing</h3>
+                <label class="checkbox-wrapper">
+                  <input type="checkbox" id="gift-wrapping" />
+                  <span class="checkmark"></span>
+                  <span class="checkbox-text">Gift wrapping +¥300 (tax included)</span>
+                </label>
+              </div>
+
+              <!-- Add to Cart Button -->
+              <button id="add-to-cart" class="add-to-cart-btn">Add to Cart</button>
+
+              <!-- Product Description -->
+              <div class="product-description">
+                <p>Contains 99.4% natural ingredients. Moisturizes and leaves your hands feeling light and smooth after washing. The scent of essential oils based on cedarwood, ylang-ylang, and mandarin evokes the scent of flowers and fresh fruits blooming in a misty forest. Feel the gentle sunlight shining through the forest with your fingertips.</p>
+              </div>
+
+              <!-- Expandable Sections -->
+              <div class="expandable-sections">
+                <div class="section">
+                  <button class="section-header" data-section="specification">
+                    <span>Specification</span>
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+                  <div class="section-content" id="specification">
+                    <p><strong>Volume:</strong> 300mL</p>
+                    <p><strong>Ingredients:</strong> 99.4% natural ingredients including cedarwood, ylang-ylang, and mandarin essential oils</p>
+                    <p><strong>Scent:</strong> Foggy Woods - floral and fresh fruit notes</p>
+                    <p><strong>Type:</strong> Hand wash with moisturizing properties</p>
+                  </div>
+                </div>
+
+                <div class="section">
+                  <button class="section-header" data-section="shipping">
+                    <span>Shipping</span>
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+                  <div class="section-content" id="shipping">
+                    <p><strong>Domestic Shipping:</strong> Free shipping on orders over ¥5,000</p>
+                    <p><strong>Delivery Time:</strong> 3-5 business days</p>
+                    <p><strong>International Shipping:</strong> Available to select countries</p>
+                    <p><strong>Express Delivery:</strong> Next day delivery available in Tokyo area</p>
+                  </div>
+                </div>
+
+                <div class="section">
+                  <button class="section-header" data-section="award">
+                    <span>Good Design Award winner</span>
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+                  <div class="section-content" id="award">
+                    <p><strong>Good Design Award 2024 Winner</strong></p>
+                    <p>This product has been recognized for its exceptional design quality, combining functional excellence with aesthetic appeal. The award recognizes products that contribute to the betterment of society through good design.</p>
+                    <p>The minimalist packaging design and sustainable ingredients reflect our commitment to both beauty and environmental responsibility.</p>
+                  </div>
+                </div>
+
+                <div class="section">
+                  <button class="section-header" data-section="gift-wrap">
+                    <span>Gift wrapping</span>
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+                  <div class="section-content" id="gift-wrap">
+                    <p><strong>Premium Gift Wrapping:</strong> ¥300 (tax included)</p>
+                    <p>Beautiful minimalist wrapping with our signature ribbon</p>
+                    <p><strong>Gift Message:</strong> Include a personalized message card</p>
+                    <p><strong>Eco-Friendly:</strong> Made from recycled materials</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="right"></div>
+      </main>
     </div>
 
     <footer class="footer">
@@ -94,18 +193,6 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        var hamburger = document.getElementById("hamburger");
-        var mobileMenu = document.getElementById("mobileMenu");
-        if (hamburger && mobileMenu) {
-          hamburger.addEventListener("click", function () {
-            mobileMenu.classList.toggle("show");
-          });
-        }
-      });
-    </script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
         const hamburger = document.getElementById("hamburger");
         const mobileMenu = document.getElementById("mobileMenu");
 
@@ -116,6 +203,7 @@
         }
       });
     </script>
+    <script src="main.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
