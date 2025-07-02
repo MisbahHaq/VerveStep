@@ -1,209 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product</title>
     <link rel="stylesheet" href="product.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="nav-top"></div>
     <div class="nav">
-      <div class="left">
-        <div class="logo"><h1>Ecomm</h1></div>
-        <div class="nav-items">
-          <a href="./index.html"><p>Home</p></a>
-          <a href="./shop.html"><p>All Products</p></a>
-          <a href="./gift.html"> <p>Gift Box</p></a>
+        <div class="left">
+            <div class="logo">
+                <h1>Ecomm</h1>
+            </div>
+            <div class="nav-items">
+                <a href="./index.html">
+                    <p>Home</p>
+                </a>
+                <a href="./shop.html">
+                    <p>All Products</p>
+                </a>
+                <a href="./gift.html">
+                    <p>Gift Box</p>
+                </a>
+            </div>
         </div>
-      </div>
-      <div class="right">
-        <div class="credentials">
-          <p>Login</p>
-          <p>Cart (0)</p>
+        <div class="right">
+            <div class="credentials">
+                <p>Login</p>
+                <p>Cart (0)</p>
+            </div>
+            <div class="hamburger" id="hamburger">&#9776;</div>
         </div>
-        <div class="hamburger" id="hamburger">&#9776;</div>
-      </div>
     </div>
 
     <!-- Mobile Dropdown Menu -->
     <div class="mobile-menu" id="mobileMenu">
-      <a href="./index.html"><p>Home</p></a>
-      <a href="./shop.html"><p>All Products</p></a>
-      <a href="./gift.html"> <p>Gift Box</p></a>
-      <p>Body Care</p>
-      <p>Hand Care</p>
+        <a href="./index.html">
+            <p>Home</p>
+        </a>
+        <a href="./shop.html">
+            <p>All Products</p>
+        </a>
+        <a href="./gift.html">
+            <p>Gift Box</p>
+        </a>
+        <p>Body Care</p>
+        <p>Hand Care</p>
     </div>
 
     <!-- Main Content -->
     <main class="main">
         <div class="container">
-          <div class="product-layout">
-            <!-- Product Images -->
-            <div class="product-images">
-              <div class="main-image">
-                <div class="award-badge">
-                  <div class="award-icon">
-                    <i class="fas fa-award"></i>
-                  </div>
+            <div class="product-layout">
+                <!-- Product Images -->
+                <div class="product-images">
+                    <div class="main-image">
+                        <div class="award-badge">
+                            <div class="award-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                        </div>
+                        <img id="main-product-image" src="./Images/temp1.webp" alt="Aromatic Hand Wash" />
+                    </div>
+                    <div class="thumbnail-images">
+                        <img class="thumbnail active" src="./Images/p3.webp" alt="Product view 1" />
+                        <img class="thumbnail" src="./Images/p5.webp" alt="Product view 2" />
+                        <img class="thumbnail" src="./Images/g3.webp" alt="Product view 3" />
+                        <img class="thumbnail" src="./Images/4.webp" alt="Product view 4" />
+                    </div>
                 </div>
-                <img id="main-product-image" src="./Images/temp1.webp" alt="Aromatic Hand Wash" />
-              </div>
-              <div class="thumbnail-images">
-                <img class="thumbnail active" src="./Images/p3.webp" alt="Product view 1" />
-                <img class="thumbnail" src="./Images/p5.webp" alt="Product view 2" />
-                <img class="thumbnail" src="./Images/g3.webp" alt="Product view 3" />
-                <img class="thumbnail" src="./Images/4.webp" alt="Product view 4" />
-              </div>
+
+                <!-- Product Details -->
+                <div class="product-details">
+                    <h1 class="product-title">Aromatic Hand Wash / Foggy Woods / 300mL</h1>
+
+                    <div class="product-price">
+                        <span class="price">¥3,430</span>
+                        <span class="tax-info">(tax included)</span>
+                    </div>
+
+                    <!-- Packing Options -->
+                    <div class="packing-section">
+                        <h3>packing</h3>
+                        <label class="checkbox-wrapper">
+                            <input type="checkbox" id="gift-wrapping" />
+                            <span class="checkmark"></span>
+                            <span class="checkbox-text">Gift wrapping +¥300 (tax included)</span>
+                        </label>
+                    </div>
+
+                    <!-- Add to Cart Button -->
+                    <button id="add-to-cart" class="add-to-cart-btn">Add to Cart</button>
+
+                    <!-- Product Description -->
+                    <div class="product-description">
+                        <p>Contains 99.4% natural ingredients. Moisturizes and leaves your hands feeling light and
+                            smooth after washing. The scent of essential oils based on cedarwood, ylang-ylang, and
+                            mandarin evokes the scent of flowers and fresh fruits blooming in a misty forest. Feel the
+                            gentle sunlight shining through the forest with your fingertips.</p>
+                    </div>
+
+                    <!-- Expandable Sections -->
+                    <div class="expandable-sections">
+                        <div class="section">
+                            <button class="section-header" data-section="specification">
+                                <span>Specification</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="section-content" id="specification">
+                                <p><strong>Volume:</strong> 300mL</p>
+                                <p><strong>Ingredients:</strong> 99.4% natural ingredients including cedarwood,
+                                    ylang-ylang, and mandarin essential oils</p>
+                                <p><strong>Scent:</strong> Foggy Woods - floral and fresh fruit notes</p>
+                                <p><strong>Type:</strong> Hand wash with moisturizing properties</p>
+                            </div>
+                        </div>
+
+                        <div class="section">
+                            <button class="section-header" data-section="shipping">
+                                <span>Shipping</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="section-content" id="shipping">
+                                <p><strong>Domestic Shipping:</strong> Free shipping on orders over ¥5,000</p>
+                                <p><strong>Delivery Time:</strong> 3-5 business days</p>
+                                <p><strong>International Shipping:</strong> Available to select countries</p>
+                                <p><strong>Express Delivery:</strong> Next day delivery available in Tokyo area</p>
+                            </div>
+                        </div>
+                        
+                        <div class="section">
+                            <button class="section-header" data-section="gift-wrap">
+                                <span>Gift wrapping</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="section-content" id="gift-wrap">
+                                <p><strong>Premium Gift Wrapping:</strong> ¥300 (tax included)</p>
+                                <p>Beautiful minimalist wrapping with our signature ribbon</p>
+                                <p><strong>Gift Message:</strong> Include a personalized message card</p>
+                                <p><strong>Eco-Friendly:</strong> Made from recycled materials</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <!-- Product Details -->
-            <div class="product-details">
-              <h1 class="product-title">Aromatic Hand Wash / Foggy Woods / 300mL</h1>
-              
-              <div class="product-price">
-                <span class="price">¥3,430</span>
-                <span class="tax-info">(tax included)</span>
-              </div>
-
-              <!-- Packing Options -->
-              <div class="packing-section">
-                <h3>packing</h3>
-                <label class="checkbox-wrapper">
-                  <input type="checkbox" id="gift-wrapping" />
-                  <span class="checkmark"></span>
-                  <span class="checkbox-text">Gift wrapping +¥300 (tax included)</span>
-                </label>
-              </div>
-
-              <!-- Add to Cart Button -->
-              <button id="add-to-cart" class="add-to-cart-btn">Add to Cart</button>
-
-              <!-- Product Description -->
-              <div class="product-description">
-                <p>Contains 99.4% natural ingredients. Moisturizes and leaves your hands feeling light and smooth after washing. The scent of essential oils based on cedarwood, ylang-ylang, and mandarin evokes the scent of flowers and fresh fruits blooming in a misty forest. Feel the gentle sunlight shining through the forest with your fingertips.</p>
-              </div>
-
-              <!-- Expandable Sections -->
-              <div class="expandable-sections">
-                <div class="section">
-                  <button class="section-header" data-section="specification">
-                    <span>Specification</span>
-                    <i class="fas fa-chevron-down"></i>
-                  </button>
-                  <div class="section-content" id="specification">
-                    <p><strong>Volume:</strong> 300mL</p>
-                    <p><strong>Ingredients:</strong> 99.4% natural ingredients including cedarwood, ylang-ylang, and mandarin essential oils</p>
-                    <p><strong>Scent:</strong> Foggy Woods - floral and fresh fruit notes</p>
-                    <p><strong>Type:</strong> Hand wash with moisturizing properties</p>
-                  </div>
-                </div>
-
-                <div class="section">
-                  <button class="section-header" data-section="shipping">
-                    <span>Shipping</span>
-                    <i class="fas fa-chevron-down"></i>
-                  </button>
-                  <div class="section-content" id="shipping">
-                    <p><strong>Domestic Shipping:</strong> Free shipping on orders over ¥5,000</p>
-                    <p><strong>Delivery Time:</strong> 3-5 business days</p>
-                    <p><strong>International Shipping:</strong> Available to select countries</p>
-                    <p><strong>Express Delivery:</strong> Next day delivery available in Tokyo area</p>
-                  </div>
-                </div>
-
-                <div class="section">
-                  <button class="section-header" data-section="award">
-                    <span>Good Design Award winner</span>
-                    <i class="fas fa-chevron-down"></i>
-                  </button>
-                  <div class="section-content" id="award">
-                    <p><strong>Good Design Award 2024 Winner</strong></p>
-                    <p>This product has been recognized for its exceptional design quality, combining functional excellence with aesthetic appeal. The award recognizes products that contribute to the betterment of society through good design.</p>
-                    <p>The minimalist packaging design and sustainable ingredients reflect our commitment to both beauty and environmental responsibility.</p>
-                  </div>
-                </div>
-
-                <div class="section">
-                  <button class="section-header" data-section="gift-wrap">
-                    <span>Gift wrapping</span>
-                    <i class="fas fa-chevron-down"></i>
-                  </button>
-                  <div class="section-content" id="gift-wrap">
-                    <p><strong>Premium Gift Wrapping:</strong> ¥300 (tax included)</p>
-                    <p>Beautiful minimalist wrapping with our signature ribbon</p>
-                    <p><strong>Gift Message:</strong> Include a personalized message card</p>
-                    <p><strong>Eco-Friendly:</strong> Made from recycled materials</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </main>
+    </main>
+    </div>
+
+    <div class="middle">
+        <h1 class="mid">Scent</h1>
+        <p> A quiet forest shrouded in mist. The warm scent of trees is the base, and the gorgeous, fresh scent of
+            flowers and fruits adds a touch of elegance. The scent of living nature is evoked by a carefully crafted
+            harmony.</p>
+    </div>
+
+    <div class="middle">
+        <h1 class="mid">Creation</h1>
+        <p> Ecomm offers products that can be used for as long as possible, that you will not tire of, and that are as
+            natural as possible. Based on ethical choices, it contains 99.4% naturally derived ingredients and has 11
+            free formulas. (Does not contain 1 to 11: 1. Alcohol, 2. Paraben, 3. Mineral oil, 4. Synthetic coloring, 5.
+            Synthetic fragrance, 6. Petroleum-based surfactant, 7. UV absorber, 8. Silicone, 9. Petroleum-based oil, 10.
+            Synthetic polymer, 11. Animal-derived raw materials)
+            The bottle is made of 100% recycled PET, and the packaging is made of paper made from sugarcane pomace. It
+            has a simple and sophisticated appearance so that the ever-changing appearance over time will be seen as an
+            attractive feature.</p>
+            <img src="./Images/use.webp" alt="">
+    </div>
+
+    <div class="middle">
+        <h1 class="mid">How to Use</h1>
+        <p> Take an appropriate amount in your hands, lather well, then wash your hands and rinse thoroughly with water or lukewarm water.
+        </p>
+            <img src="./Images/h.webp" alt="">
     </div>
 
     <footer class="footer">
-      <div class="footer-columns">
-        <div class="footer-col">
-          <h4>Help & Support</h4>
-          <ul>
-            <li>About RUSTIC</li>
-            <li>FAQ</li>
-            <li>Inquiry</li>
-            <li>
-              Description based on the Specified Commercial Transactions Act
-            </li>
-            <li>Terms of Service</li>
-            <li>Privacy Policy</li>
-          </ul>
-        </div>
+        <div class="footer-columns">
+            <div class="footer-col">
+                <h4>Help & Support</h4>
+                <ul>
+                    <li>About RUSTIC</li>
+                    <li>FAQ</li>
+                    <li>Inquiry</li>
+                    <li>
+                        Description based on the Specified Commercial Transactions Act
+                    </li>
+                    <li>Terms of Service</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </div>
 
-        <div class="footer-col">
-          <h4>Social Media</h4>
-          <ul>
-            <li>Instagram</li>
-            <li>LINE</li>
-            <li>Pinterest</li>
-          </ul>
-        </div>
+            <div class="footer-col">
+                <h4>Social Media</h4>
+                <ul>
+                    <li>Instagram</li>
+                    <li>LINE</li>
+                    <li>Pinterest</li>
+                </ul>
+            </div>
 
-        <div class="footer-col">
-          <h4>Add LINE friends to get a 10% off coupon</h4>
-          <p><a href="#">Add LINE</a></p>
-        </div>
+            <div class="footer-col">
+                <h4>Add LINE friends to get a 10% off coupon</h4>
+                <p><a href="#">Add LINE</a></p>
+            </div>
 
-        <div class="footer-col newsletter">
-          <h4>Newsletter</h4>
-          <p class="desc">
-            By registering for email subscription, you will be able to receive
-            announcements from RUSTIC and information exclusive to email
-            members.
-          </p>
-          <div class="newsletter-input">
-            <input type="email" placeholder="Email" />
-            <button>&rarr;</button>
-          </div>
+            <div class="footer-col newsletter">
+                <h4>Newsletter</h4>
+                <p class="desc">
+                    By registering for email subscription, you will be able to receive
+                    announcements from RUSTIC and information exclusive to email
+                    members.
+                </p>
+                <div class="newsletter-input">
+                    <input type="email" placeholder="Email" />
+                    <button>&rarr;</button>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© RUSTIC All rights reserved.</p>
-      </div>
+        <div class="footer-bottom">
+            <p>© RUSTIC All rights reserved.</p>
+        </div>
     </footer>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const hamburger = document.getElementById("hamburger");
-        const mobileMenu = document.getElementById("mobileMenu");
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.getElementById("hamburger");
+            const mobileMenu = document.getElementById("mobileMenu");
 
-        if (hamburger && mobileMenu) {
-          hamburger.addEventListener("click", function () {
-            mobileMenu.classList.toggle("show");
-          });
-        }
-      });
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener("click", function () {
+                    mobileMenu.classList.toggle("show");
+                });
+            }
+        });
     </script>
     <script src="main.js"></script>
     <script src="script.js"></script>
-  </body>
+</body>
+
 </html>

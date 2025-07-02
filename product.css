@@ -308,6 +308,23 @@ a:hover {
     }
 }
 
+.middle {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.middle p {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    /* Increased from 50px */
+    font-size: 20px;
+    width: 80%;
+    text-align: center;
+}
+
 /* Hide mobile menu on desktop */
 @media (min-width: 769px) {
     .mobile-menu {
