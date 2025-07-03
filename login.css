@@ -68,3 +68,93 @@ input {
 .login-btn:hover {
     opacity: 0.9;
 }
+
+/* ===== LOGIN PAGE STYLES ===== */
+
+.login-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4rem 2rem;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-panel,
+.right-panel {
+    flex: 1 1 400px;
+}
+
+.left-panel h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.create-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #000;
+    text-decoration: underline;
+    font-size: 0.95rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 500px;
+}
+
+input[type="email"],
+input[type="password"] {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #000;
+    outline: none;
+    width: 100%;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #555;
+}
+
+.forgot-link {
+    font-size: 0.9rem;
+    text-decoration: underline;
+    color: #000;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.login-btn {
+    background-color: #000;
+    color: #fff;
+    padding: 14px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #333;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .left-panel,
+    .right-panel {
+        flex: 1 1 100%;
+    }
+}
