@@ -15,6 +15,10 @@ body {
     padding: 12px 20px;
 }
 
+li a {
+    color: whitesmoke;
+}
+
 .logo {
     width: 40px;
     color: whitesmoke;
