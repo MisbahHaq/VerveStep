@@ -3,15 +3,7 @@ class ProductPage {
         this.cartCount = 0;
         this.isGiftWrapping = false;
         this.currentImageIndex = 0;
-        // this.images = [
-        //     './Images/p3.webp',
-        //     './Images/p5.webp',
-        //     './Images/g3.webp',
-        //     './Images/4.webp'
-        // ];
-
         this.images = Array.from(document.querySelectorAll(".thumbnail")).map(img => img.src);
-
         this.init();
     }
 

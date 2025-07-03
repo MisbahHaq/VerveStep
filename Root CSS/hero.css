@@ -11,6 +11,13 @@
     transition: opacity 0.3s ease;
 }
 
+.title h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
 /* ========== 4. Second Page ========== */
 .second-page {
     width: 100%;
