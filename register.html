@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Account</title>
+    <title>Create an Account</title>
   </head>
   <link rel="stylesheet" href="../Root CSS/footer.css" />
   <link rel="stylesheet" href="../Root CSS/hero.css" />
@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../Root CSS/nav.css" />
   <link rel="stylesheet" href="../Root CSS/root.css" />
   <link rel="stylesheet" href="./login.css" />
+  <link rel="stylesheet" href="./register.css" />
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
@@ -44,14 +45,38 @@
       </nav>
     </header>
 
-    <div class="login-container">
+    <div class="register-container">
       <div class="left-panel">
-        <h2>Account Login</h2>
-        <a href="./register.html" class="create-link">Create a new account</a>
+        <h2>Create an account</h2>
       </div>
 
       <div class="right-panel">
-        <form id="login-form">
+        <p class="desc">
+          By creating an account, you can view your order history and use your
+          registered details to make payments easily.
+        </p>
+        <form id="register-form">
+          <div class="name-group">
+            <div class="input-group">
+              <label for="last-name">Last name</label>
+              <input
+                type="text"
+                id="last-name"
+                placeholder="Last name"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <label for="first-name">given name</label>
+              <input
+                type="text"
+                id="first-name"
+                placeholder="given name"
+                required
+              />
+            </div>
+          </div>
+
           <label for="email">email address</label>
           <input type="email" id="email" placeholder="email address" required />
 
@@ -63,9 +88,7 @@
             required
           />
 
-          <a href="#" class="forgot-link">Forgot your password?</a>
-
-          <button type="submit" class="login-btn">Log in</button>
+          <button type="submit" class="create-btn">Create an account</button>
         </form>
       </div>
     </div>
@@ -123,22 +146,22 @@
     <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
     <script>
       document
-        .getElementById("login-form")
+        .getElementById("register-form")
         .addEventListener("submit", function (e) {
           e.preventDefault();
 
+          const lastName = document.getElementById("last-name").value.trim();
+          const firstName = document.getElementById("first-name").value.trim();
           const email = document.getElementById("email").value.trim();
           const password = document.getElementById("password").value.trim();
 
-          if (email && password) {
+          if (lastName && firstName && email && password) {
             alert(
-              `Logging in with:\nEmail: ${email}\nPassword: ${"*".repeat(
-                password.length
-              )}`
+              `Account created:\nName: ${firstName} ${lastName}\nEmail: ${email}`
             );
-            // Here you can send the login data to a backend
+            // You can connect this to a backend or localStorage here
           } else {
-            alert("Please fill in both fields.");
+            alert("Please fill in all fields.");
           }
         });
     </script>
